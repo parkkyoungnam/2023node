@@ -9,6 +9,8 @@ app.use(morgan("combined"));
 app.use(cookieParser('pknpassword'));
 app.use(express.json());
 app.use(express.urlencoded({extended : true})); // true -> qs // false : querystring
+app.use('/', express.static(__dirname, 'public'));
+//요청경로 // 실제경로
 
 app.set("port", process.env.PORT || 3000);
 
