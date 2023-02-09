@@ -70,3 +70,4 @@ console.log(m.get(obj))
     오류 발생
     {a:'b'} !== {a:'b'} (참)
 */
+
