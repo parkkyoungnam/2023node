@@ -15,3 +15,4 @@ router.get('/join', renderJoin);
 router.get('/', renderMain);
 
 module.exports =  router;
+//초록이 작업
