@@ -5,6 +5,7 @@ const path = require('path');
 const session = require('express-session');
 const nunjucks = require('nunjucks'); //리액트 혹은 뷰로 변경 가능
 const dotenv = require('dotenv');
+const {sequelize} = require('./models');
 
 dotenv.config();
 //해당 함수부터 process.env.COOKIE_SECRET이 존재함. 자바스크립트는 위에서 아래로 실행 그렇기 때문에 최대한 위에
@@ -18,6 +19,14 @@ nunjucks.configure('views', {
     express:app,
     watch:true,
 })
+
+sequelize.sync({force : false})
+    .then(() => {
+        console.log('데이터베이스 연결 성공');
+    })
+    .catch((err) => {
+        console.log(err);
+    })
 
 
 app.use(morgan('dev')); //로깅-> 개발 모드
