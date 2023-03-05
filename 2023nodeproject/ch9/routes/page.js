@@ -1,6 +1,6 @@
 const express = require('express');
 const { isLoggedIn, isNotLoggedIn } = require('../middlewares');
-const { renderProfile, renderJoin, renderMain } = require('../controllers/page');
+const { renderProfile, renderJoin, renderMain, renderHashtag } = require('../controllers/page');
 
 const router = express.Router();
 
@@ -17,5 +17,8 @@ router.get('/profile', isLoggedIn, renderProfile);
 router.get('/join', isNotLoggedIn, renderJoin);
 
 router.get('/', renderMain);
+
+router.get('/hashtag', renderHashtag); // hashtag?hashtag=고양이
+
 
 module.exports = router;
