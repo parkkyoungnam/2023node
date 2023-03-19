@@ -23,4 +23,6 @@ const {a, b: {d} } = example;
 console.log(a); -> 123
 console.log(d); -> 146
 
+
+//
 */
