@@ -29,8 +29,26 @@ console.log(d); -> 146
  
 프로미스
 내용이 실행되었지만 결과를 반환하지 않은 객체
+promise를 동시에 실행하는 것을 allSettled
 
+const promise = new Promise(...)
+
+promise.then((result) => {
+
+})
+
+async function main(){
+    await prmoise;
+}
+
+async도 promise 다.
+main().then((name) => ...)
 
 
 
 */
+
+
+
+
+
