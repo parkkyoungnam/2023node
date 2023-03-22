@@ -45,6 +45,23 @@ async도 promise 다.
 main().then((name) => ...)
 
 
+promise는 실패할 때가 있어서, catch가 있어야하는데..
+
+async function main()
+{
+    try{
+        const result = await promise;
+        return result;
+    }
+    catch(error) {
+        console.error(error);
+    }
+}
+
+
+///
+///
+///
 
 */
 
